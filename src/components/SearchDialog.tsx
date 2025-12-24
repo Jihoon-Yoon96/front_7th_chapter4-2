@@ -44,8 +44,10 @@ interface SearchOption {
 }
 const PAGE_SIZE = 100;
 
-const fetchMajors = () => apiClient.get<Lecture[]>('/schedules-majors.json');
-const fetchLiberalArts = () => apiClient.get<Lecture[]>('/schedules-liberal-arts.json');
+const BASE_URL = process.env.NODE_ENV === "production" ? "/front_7th_chapter4-2" : "";
+
+const fetchMajors = () => apiClient.get<Lecture[]>(`${BASE_URL}/schedules-majors.json`);
+const fetchLiberalArts = () => apiClient.get<Lecture[]>(`${BASE_URL}/schedules-liberal-arts.json`);
 
 const fetchAllLectures = async () =>
     await Promise.all([
