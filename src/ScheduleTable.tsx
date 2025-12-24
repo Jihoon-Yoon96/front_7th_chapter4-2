@@ -17,7 +17,7 @@ import { Schedule } from "./types.ts";
 import { fill2, parseHnM } from "./utils.ts";
 import { useDndContext, useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
-import { ComponentProps, Fragment } from "react";
+import {ComponentProps, Fragment, memo} from "react";
 
 interface Props {
   tableId: string;
@@ -127,7 +127,7 @@ const ScheduleTable = ({ tableId, schedules, onScheduleTimeClick, onDeleteButton
   );
 };
 
-const DraggableSchedule = ({
+const DraggableSchedule = memo(({
  id,
  data,
  bg,
@@ -175,6 +175,6 @@ const DraggableSchedule = ({
       </PopoverContent>
     </Popover>
   );
-}
+})
 
 export default ScheduleTable;
