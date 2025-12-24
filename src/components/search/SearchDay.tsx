@@ -10,14 +10,14 @@ import { DAY_LABELS } from "../../constants";
 
 interface Props {
     days: string[];
-    handleDaysChange: (value: (string | number)[]) => void;
+    selectDays: (value: (string | number)[]) => void;
 }
 
-const SelectDay = ({ days, handleDaysChange }: Props) => {
+const SelectDay = ({ days, selectDays }: Props) => {
     return (
         <FormControl>
             <FormLabel>요일</FormLabel>
-            <CheckboxGroup value={days} onChange={handleDaysChange}>
+            <CheckboxGroup value={days} onChange={selectDays}>
                 <HStack spacing={4}>
                     {DAY_LABELS.map((day) => (
                         <Checkbox key={day} value={day}>

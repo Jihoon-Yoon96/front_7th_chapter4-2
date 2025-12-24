@@ -41,18 +41,18 @@ const TIME_SLOTS = [
 
 interface Props {
     times: number[];
-    handleTimesChange: (value: (string | number)[]) => void;
+    selectTimes: (value: (string | number)[]) => void;
     removeTimeFilter: (time: number) => void;
 }
 
-const SelectTime = ({ times, handleTimesChange, removeTimeFilter }: Props) => {
+const SelectTime = ({ times, selectTimes, removeTimeFilter }: Props) => {
     return (
         <FormControl>
             <FormLabel>시간</FormLabel>
             <CheckboxGroup
                 colorScheme="green"
                 value={times}
-                onChange={handleTimesChange}
+                onChange={selectTimes}
             >
                 <Wrap spacing={1} mb={2}>
                     {times

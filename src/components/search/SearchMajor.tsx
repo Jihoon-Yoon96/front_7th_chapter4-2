@@ -14,14 +14,14 @@ import {
 
 interface Props {
     majors: string[];
-    handleMajorsChange: (value: (string | number)[]) => void;
+    selectMajors: (value: (string | number)[]) => void;
     removeMajorFilter: (major: string) => void;
     allMajors: string[];
 }
 
 const SelectMajor = ({
                          majors,
-                         handleMajorsChange,
+                         selectMajors,
                          removeMajorFilter,
                          allMajors,
                      }: Props) => {
@@ -31,7 +31,7 @@ const SelectMajor = ({
             <CheckboxGroup
                 colorScheme="green"
                 value={majors}
-                onChange={handleMajorsChange}
+                onChange={selectMajors}
             >
                 <Wrap spacing={1} mb={2}>
                     {majors.map((major) => (

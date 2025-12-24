@@ -9,14 +9,14 @@ import { memo } from "react";
 
 interface Props {
     grades: number[];
-    handleGradesChange: (value: (string | number)[]) => void;
+    selectGrades: (value: (string | number)[]) => void;
 }
 
-const SelectGrade = ({ grades, handleGradesChange }: Props) => {
+const SelectGrade = ({ grades, selectGrades }: Props) => {
     return (
         <FormControl>
             <FormLabel>학년</FormLabel>
-            <CheckboxGroup value={grades} onChange={handleGradesChange}>
+            <CheckboxGroup value={grades} onChange={selectGrades}>
                 <HStack spacing={4}>
                     {[1, 2, 3, 4].map((grade) => (
                         <Checkbox key={grade} value={grade}>
