@@ -1,8 +1,8 @@
 import { Flex } from "@chakra-ui/react";
 import { useMemo, useState } from "react";
 import { useScheduleState } from "./ScheduleContext.tsx";
-import SearchDialog from "./SearchDialog.tsx";
-import SingleSchedule from "./SingleSchedule.tsx";
+import SearchDialog from "./components/SearchDialog.tsx";
+import SingleSchedule from "./components/SingleSchedule.tsx";
 
 export type SearchInfo = {
   tableId: string;

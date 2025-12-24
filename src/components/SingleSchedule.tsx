@@ -1,10 +1,10 @@
 import { Button, ButtonGroup, Flex, Heading, Stack } from "@chakra-ui/react";
 import { memo, useCallback, useMemo } from "react";
-import ScheduleDndProvider from "./ScheduleDndProvider";
-import ScheduleTable from "./ScheduleTable";
-import { Schedule } from "./types";
-import { useScheduleActions } from "./ScheduleContext";
-import { SearchInfo } from "./ScheduleTables";
+import ScheduleDndProvider from "../ScheduleDndProvider.tsx";
+import ScheduleTable from "./ScheduleTable.tsx";
+import { Schedule } from "../types.ts";
+import { useScheduleActions } from "../ScheduleContext.tsx";
+import { SearchInfo } from "../ScheduleTables.tsx";
 
 interface Props {
     tableId: string;

@@ -9,12 +9,12 @@ import {
   PopoverTrigger,
   Text,
 } from "@chakra-ui/react";
-import { CellSize, DAY_LABELS } from "./constants.ts";
-import { Schedule } from "./types.ts";
+import { CellSize, DAY_LABELS } from "../constants.ts";
+import { Schedule } from "../types.ts";
 import { useDndContext, useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 import {ComponentProps, memo, useCallback} from "react";
-import TableGrid from "./components/TableLayout.tsx";
+import TableGrid from "./TableLayout.tsx";
 
 type TimeInfo = { day: string; time: number };
 interface Props {

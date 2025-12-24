@@ -16,17 +16,17 @@ import {
   Tr,
   VStack,
 } from "@chakra-ui/react";
-import { useScheduleActions } from "./ScheduleContext.tsx";
-import { Lecture } from "./types.ts";
-import { parseSchedule } from "./utils.ts";
-import { apiClient } from "./hook/CallAPI.ts";
-import { Lectures } from "./components/search/Lectures.tsx";
-import SearchInput from "./components/search/SearchInput.tsx";
-import SearchCredit from "./components/search/SearchCredit.tsx";
-import SearchGrade from "./components/search/SearchGrade.tsx";
-import SearchDay from "./components/search/SearchDay.tsx";
-import SearchTime from "./components/search/SearchTime.tsx";
-import SearchMajor from "./components/search/SearchMajor.tsx";
+import { useScheduleActions } from "../ScheduleContext.tsx";
+import { Lecture } from "../types.ts";
+import { parseSchedule } from "../utils.ts";
+import { apiClient } from "../hook/CallAPI.ts";
+import { Lectures } from "./search/Lectures.tsx";
+import SearchInput from "./search/SearchInput.tsx";
+import SearchCredit from "./search/SearchCredit.tsx";
+import SearchGrade from "./search/SearchGrade.tsx";
+import SearchDay from "./search/SearchDay.tsx";
+import SearchTime from "./search/SearchTime.tsx";
+import SearchMajor from "./search/SearchMajor.tsx";
 interface Props {
   isOpen: boolean;
   tableId: string | null;
